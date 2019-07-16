@@ -49,9 +49,6 @@ class cliente(object):
         """modifica el atributo categoria del cliente """
         self.categoria= categoria 
   
-    def testcliente(self, cliente):
-        """modifica el atributo categoria del cliente """
-        print (self.dni, self.categoria) 
     
 if __name__ == "__main__":
     """ simular una fila en una entidad bancaria"""

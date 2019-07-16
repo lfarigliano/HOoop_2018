@@ -7,19 +7,17 @@ clientespool= []
 for i in range(1,100):
     n=randint(1,44000000)
     clientespool.append(cliente(n))
-    print(i)
-    print(clientespool[-1].dni)
-#    if uniform(0,1) < tol:
-#        cliente1.modificarcategoria('Preferencial') 
-#    else:
-#        cliente1.modificarcategoria('General') 
-#    cliente1.testcliente(n)
-#    if cliente1.categoria == 'Preferencial':
-#        filapref1.insertar(cliente1)
-#    else:
-#        filagen1.insertar(cliente1)    
-#    print (filapref1.enfila,filagen1.enfila)
-#
+    if uniform(0,1) < tol:
+        clientespool[-1].modificarcategoria('Preferencial') 
+    else:
+        clientespool[-1].modificarcategoria('General') 
+    print(clientespool[-1].dni,clientespool[-1].categoria)
+    if clientespool[-1].categoria == 'Preferencial':
+        filapref1.insertar(clientespool[-1])
+    else:
+        filagen1.insertar(clientespool[-1])    
+    print (filapref1.enfila,filagen1.enfila)
+
 #while true:
     
 
