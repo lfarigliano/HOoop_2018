@@ -20,8 +20,7 @@ class FilaPreferencial(Fila):
     
     def abrircajanuva(self,maxenfila,filanueva):
         """Si maxenfila es menor que la cantidad de clientes actualmente en espera, abro nueva caja"""
-        if self.enfila > maxenfila:
-            
+        pass    
     
     
     
@@ -56,4 +55,3 @@ class cliente(object):
     
 if __name__ == "__main__":
     """ simular una fila en una entidad bancaria"""
-    print (dni)
