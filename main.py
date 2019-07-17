@@ -18,9 +18,10 @@ class FilaPreferencial(Fila):
         self.enfila-=1
         self.fila.pop(0)
     
-    def abrircajanuva(self,maxenfila,filanueva):
+    def abrircajanueva(self,maxenfila,filanueva):
         """Si maxenfila es menor que la cantidad de clientes actualmente en espera, abro nueva caja"""
-        pass    
+        filanueva= self.enfila // maxenfila
+        filanueva+=1
     
     
     
