@@ -37,6 +37,10 @@ class FilaGeneral(Fila):
         self.enfila-=1
         self.fila.pop(0)
 
+    def sacar(self):
+        """Inserta un nuevo cliente en la fila no preferencial"""
+        self.enfila-=1
+        self.fila.pop(0)
     
 
 class cliente(object):
