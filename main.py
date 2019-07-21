@@ -4,6 +4,8 @@ class Fila(object):
         """constructor de la clase Fila """
         self.enfila = 0
         self.fila = []
+  
+
 
 class FilaPreferencial(Fila):
     """Clase de la fila de los clientes preferenciales"""        
@@ -18,11 +20,14 @@ class FilaPreferencial(Fila):
         self.enfila-=1
         self.fila.pop(0)
     
-    def abrircajanueva(self,maxenfila,filanueva):
+    def abrircajanueva(self,maxenfila):
         """Si maxenfila es menor que la cantidad de clientes actualmente en espera, abro nueva caja"""
         filanueva= self.enfila // maxenfila
         filanueva+=1
-    
+        return filanueva
+    def contar(self):
+        """Atiende al proximo cliente prederencial"""
+        return self.enfila
     
     
 class FilaGeneral(Fila):
@@ -42,6 +47,9 @@ class FilaGeneral(Fila):
         """Inserta un nuevo cliente en la fila no preferencial"""
         self.enfila-=1
         self.fila.pop(0)
+    def contar(self):
+        """Atiende al proximo cliente prederencial"""
+        return self.enfila
     
 
 class cliente(object):
@@ -53,7 +61,12 @@ class cliente(object):
     def modificarcategoria(self, categoria):
         """modifica el atributo categoria del cliente """
         self.categoria= categoria 
-  
+
+class printtofile(object):
+    def imprimir(file,cont,npref,ngen,nclientes):
+        L = [str(cont)," ",str(npref)," ",str(ngen)," ",str(nclientes),"\n"]   
+        file.writelines(L)
+
     
 if __name__ == "__main__":
     """ simular una fila en una entidad bancaria"""
